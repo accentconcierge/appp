@@ -1,0 +1,19 @@
+<center>
+	<h2> Login </h2>
+	<br>
+<div class = 'container'>
+
+<%= form_for(:session, url: login_path) do |f| %> 
+
+  <%= f.email_field :email, class: 'form-control', :placeholder => "Email" %> <br>
+
+  <%= f.password_field :password, class: 'form-control', :placeholder => "Password" %> <br>
+  <br>
+  <%= f.submit "Log in", class: "btn btn-lg btn-primary" %><br><br>
+
+  Don't Have An Account? <%= link_to 'Sign Up', signup_path %>
+
+<% end %>
+
+</div>
+</center>

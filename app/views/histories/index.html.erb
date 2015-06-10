@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+
+<center>
+  <h1>Listing Histories</h1>
+<table class = 'table table-hover' style = 'width: 70%'>
+  <thead>
+    <tr>
+      <th>Service</th>
+      <th>Charge</th>
+      <th>Feedback</th>
+      <th>Tip</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @histories.each do |history| %>
+      <tr>
+        <td><%= history.service %></td>
+        <td><%= history.charge %></td>
+        <td><%= history.feedback %></td>
+        <td><%= history.tip %></td>
+        <td><%= link_to 'Show', history %></td>
+        <td><%= link_to 'Edit', edit_history_path(history) %></td>
+        <td><%= link_to 'Destroy', history, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New History', new_history_path %>
+</center>

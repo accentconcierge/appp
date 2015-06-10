@@ -1,0 +1,41 @@
+<center>
+
+<div class = 'container' style= 'width: 50%;'>
+<%= form_for(@user) do |f| %>
+  <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this history from being saved:</h2>
+
+      <ul>
+      <% @user.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <%= f.label :first_name %>:
+  <%= f.text_field :first_name, class: 'form-control' %><br />
+
+  <%= f.label :last_name %>:
+  <%= f.text_field :last_name, class: 'form-control' %><br />
+
+  <%= f.label :country_code %>:
+  <%= f.text_field :country_code, class: 'form-control' %><br />
+<br>
+  <%= f.label :phone_number %>:
+  <%= f.text_field :phone_number, class: 'form-control' %><br />
+
+  <%= f.label :email %>:
+  <%= f.text_field :email, class: 'form-control' %><br />
+
+  <%= f.label :password %>:
+  <%= f.text_field :password, class: 'form-control' %><br />
+
+
+  <%= f.submit 'Submit', class: 'btn btn-info btn-lg' %>
+
+<% end %>
+</div>
+<br><br>
+</center>

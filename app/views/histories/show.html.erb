@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Service:</strong>
+  <%= @history.service %>
+</p>
+
+<p>
+  <strong>Charge:</strong>
+  <%= @history.charge %>
+</p>
+
+<p>
+  <strong>Feedback:</strong>
+  <%= @history.feedback %>
+</p>
+
+<p>
+  <strong>Tip:</strong>
+  <%= @history.tip %>
+</p>
+
+<%= link_to 'Edit', edit_history_path(@history) %> |
+<%= link_to 'Back', histories_path %>
